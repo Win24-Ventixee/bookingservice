@@ -13,9 +13,6 @@ public class BookingsController(IBookingService bookingsService) : ControllerBas
   [HttpPost]
   public async Task<IActionResult> Create(CreateBookingRequest request)
   {
-    if(!ModelState.IsValid)
-      return BadRequest(ModelState);
-
     var result = await _bookingsService.CreateBookingAsync(request);
     return result.Success
       ? Ok()

@@ -22,7 +22,7 @@ public class BookingService(IBookingRepository bookingRepository) : IBookingServ
         Email = request.Email,
         Address = new BookingAddressEntity
         {
-          StreetName = request.StreeetName,
+          StreetName = request.StreetName,
           PostalCode = request.PostalCode,
           City = request.City,
         }
